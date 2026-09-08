@@ -40,14 +40,14 @@ export default function ExperienceForm({ data, onChange }) {
               <Input
                 value={entry.company}
                 onChange={(e) => updateEntry(entry.id, 'company', e.target.value)}
-                placeholder="Acme Corp"
+                placeholder="Luthor Corp"
               />
             </Field>
             <Field label="Location">
               <Input
                 value={entry.location}
                 onChange={(e) => updateEntry(entry.id, 'location', e.target.value)}
-                placeholder="Remote"
+                placeholder="Lagos, Nigeria"
               />
             </Field>
             <div className="grid grid-cols-2 gap-3">

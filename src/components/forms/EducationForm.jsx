@@ -30,14 +30,14 @@ export default function EducationForm({ data, onChange }) {
               <Input
                 value={entry.school}
                 onChange={(e) => updateEntry(entry.id, 'school', e.target.value)}
-                placeholder="University of Lagos"
+                placeholder="University of Abraka"
               />
             </Field>
             <Field label="Location">
               <Input
                 value={entry.location}
                 onChange={(e) => updateEntry(entry.id, 'location', e.target.value)}
-                placeholder="Lagos, Nigeria"
+                placeholder="Delta State, Nigeria"
               />
             </Field>
             <Field label="Degree">
@@ -51,7 +51,7 @@ export default function EducationForm({ data, onChange }) {
               <Input
                 value={entry.field}
                 onChange={(e) => updateEntry(entry.id, 'field', e.target.value)}
-                placeholder="Computer Science"
+                placeholder="Integrated Science"
               />
             </Field>
             <div className="grid grid-cols-2 gap-3">

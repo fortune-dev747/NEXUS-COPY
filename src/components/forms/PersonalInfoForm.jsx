@@ -34,7 +34,7 @@ export default function PersonalInfoForm({ data, onChange }) {
           type="tel"
           value={data.phone}
           onChange={update('phone')}
-          placeholder="+234 9017186911"
+          placeholder="+234 916 979 3399"
           autoComplete="tel"
         />
       </Field>
@@ -56,7 +56,7 @@ export default function PersonalInfoForm({ data, onChange }) {
         <Input
           value={data.website}
           onChange={update('website')}
-          placeholder="fortune.dev"
+          placeholder="https://my-portfolio-pink-two-47.vercel.app/"
         />
       </Field>
     </div>
