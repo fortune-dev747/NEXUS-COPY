@@ -16,6 +16,7 @@ import CertificationsForm from './components/forms/CertificationsForm.jsx'
 import { PersonalInfoIcon } from './components/icons/SectionIcons.jsx'
 import personalInfoIllustration from './assets/illustrations/personal-info.svg'
 import ConfirmDialog from './components/ConfirmDialog.jsx'
+import { Button } from './components/common/Button.jsx'
 
 function AppShell({ onHome }) {
   const [resume, setResume] = useLocalStorage('cv-builder-resume-data', emptyResumeData)
@@ -107,6 +108,23 @@ function AppShell({ onHome }) {
             <ScaledPreview>
               <ResumePreview data={data} />
             </ScaledPreview>
+          </div>
+
+          {/* Mobile-only: header has no room for this button below the sm breakpoint,
+      so it lives here instead, right under the preview. */}
+          <div className="sm:hidden flex justify-center pb-2 print:hidden">
+            <Button variant="purple" onClick={handleReset}>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path
+                  d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Start over
+            </Button>
           </div>
         </div>
       </main>

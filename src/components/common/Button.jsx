@@ -12,7 +12,8 @@ export const Button = forwardRef(function Button(
     outline:
       'border border-ink-200 dark:border-ink-700 text-ink-700 dark:text-ink-200 hover:bg-ink-50 dark:hover:bg-ink-800',
     danger: 'bg-transparent text-red-600 hover:bg-red-50 dark:hover:bg-red-950/40',
-dangerSolid: 'bg-red-600 text-white hover:bg-red-700 disabled:opacity-50',
+    dangerSolid: 'bg-red-600 text-white hover:bg-red-700 disabled:opacity-50',
+    purple: 'bg-violet-600 text-white hover:bg-violet-700 disabled:opacity-50',
   }
   return (
     <button

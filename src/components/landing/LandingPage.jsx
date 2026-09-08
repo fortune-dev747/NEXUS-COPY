@@ -8,7 +8,7 @@ export default function LandingPage({ onGetStarted }) {
 
       {/* content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/70 bg-white/5 backdrop-blur border border-white/10 rounded-full px-3 py-1 mb-6">
+        <span className="inline-flex mb-4 items-center gap-2 whitespace-nowrap rounded-full border border-white/10 bg-white/5 backdrop-blur px-2.5 sm:px-3 py-1 text-[9px] sm:text-[11px] font-mono uppercase tracking-[0.1em] sm:tracking-[0.2em] text-white/70">
           Free · No sign-up · Built for ATS
         </span>
 
@@ -20,7 +20,7 @@ export default function LandingPage({ onGetStarted }) {
           />
         </div>
 
-        <p className="mt-6 max-w-xl text-base sm:text-lg text-white/70 leading-relaxed">
+        <p className="mt-6 text-base sm:text-lg text-white/60 leading-relaxed max-w-md text-pretty">
          Build a clean, professional, ATS-friendly CV. Enter your details, organize your experience and export a clean PDF in minutes.
         </p>
 

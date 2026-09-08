@@ -9,7 +9,7 @@ export default function ThemeToggle() {
     <IconButton
       label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       onClick={toggleTheme}
-      className="w-9 h-9"
+     className="w-8 h-8 sm:w-9 sm:h-9"
     >
       {isDark ? (
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
