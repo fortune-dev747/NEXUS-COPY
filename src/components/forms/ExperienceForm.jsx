@@ -2,6 +2,7 @@ import { Field, Input, TextArea } from '../common/Field.jsx'
 import { Button } from '../common/Button.jsx'
 import { EntryCard } from '../common/EntryCard.jsx'
 import { blankExperience } from '../../data/defaultData.js'
+import experienceIllustration from '../../assets/illustrations/experience.svg'
 
 export default function ExperienceForm({ data, onChange }) {
   const updateEntry = (id, field, value) =>
@@ -15,6 +16,12 @@ export default function ExperienceForm({ data, onChange }) {
 
   return (
     <div className="space-y-4">
+      <img
+        src={experienceIllustration}
+        alt=""
+        aria-hidden="true"
+        className="w-40 sm:w-44 h-auto mx-auto"
+      />
       {data.map((entry, i) => (
         <EntryCard
           key={entry.id}
