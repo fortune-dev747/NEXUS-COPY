@@ -2,6 +2,7 @@ import { Field, Input } from '../common/Field.jsx'
 import { Button } from '../common/Button.jsx'
 import { EntryCard } from '../common/EntryCard.jsx'
 import { blankCertification } from '../../data/defaultData.js'
+import certificationsIllustration from '../../assets/illustrations/certifications.svg'
 
 export default function CertificationsForm({ data, onChange }) {
   const updateEntry = (id, field, value) =>
@@ -12,6 +13,12 @@ export default function CertificationsForm({ data, onChange }) {
 
   return (
     <div className="space-y-4">
+      <img
+        src={certificationsIllustration}
+        alt=""
+        aria-hidden="true"
+        className="h-32 sm:h-36 w-auto mx-auto"
+      />
       {data.map((entry, i) => (
         <EntryCard
           key={entry.id}
