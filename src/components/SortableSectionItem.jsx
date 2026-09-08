@@ -42,7 +42,7 @@ export default function SortableSectionItem({ id, Icon, label, children }) {
           onClick={() => setOpen((o) => !o)}
           className="flex flex-1 items-center gap-2 text-left"
         >
-        {Icon && <Icon className="w-4 h-4 text-ink-500 dark:text-ink-400" />}
+          {Icon && <Icon className="w-4 h-4 text-ink-500 dark:text-ink-400" />}
           <h2 className="font-display text-base font-semibold text-ink-800 dark:text-ink-100">
             {label}
           </h2>

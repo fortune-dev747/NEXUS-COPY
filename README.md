@@ -1,4 +1,4 @@
-# Fair Copy — ATS Resume Builder
+# Nexus Copy — ATS CV Builder
 
 A single-resume, client-side CV builder. Fill in the form, reorder sections by
 drag-and-drop, and export a clean, ATS-safe PDF straight from the browser.
