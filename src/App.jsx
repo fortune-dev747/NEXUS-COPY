@@ -104,7 +104,7 @@ function AppShell({ onHome }) {
 
         {/* Preview column */}
         <div className="print:contents">
-          <div className="lg:sticky lg:top-[76px] lg:max-h-[calc(100vh-88px)] overflow-auto pb-6 print:p-0 print:overflow-visible print:max-h-none rounded-lg">
+         <div className="lg:sticky lg:top-[76px] lg:max-h-[calc(100vh-88px)] overflow-y-auto overflow-x-hidden sm:overflow-auto pb-6 print:p-0 print:overflow-visible print:max-h-none rounded-lg">
             <ScaledPreview>
               <ResumePreview data={data} />
             </ScaledPreview>
