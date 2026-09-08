@@ -2,6 +2,7 @@ import { Field, Input } from '../common/Field.jsx'
 import { Button } from '../common/Button.jsx'
 import { EntryCard } from '../common/EntryCard.jsx'
 import { blankEducation } from '../../data/defaultData.js'
+import educationIllustration from '../../assets/illustrations/education.svg'
 
 export default function EducationForm({ data, onChange }) {
   const updateEntry = (id, field, value) =>
@@ -12,6 +13,12 @@ export default function EducationForm({ data, onChange }) {
 
   return (
     <div className="space-y-4">
+      <img
+        src={educationIllustration}
+        alt=""
+        aria-hidden="true"
+        className="w-40 sm:w-44 h-auto mx-auto"
+      />
       {data.map((entry, i) => (
         <EntryCard
           key={entry.id}
