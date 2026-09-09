@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const SHEET_WIDTH_MM = 210
+const SHEET_HEIGHT_MM = 297
 const MM_TO_PX = 3.7795275591 // at 96dpi, matches how browsers render `mm` units
 
 export default function ScaledPreview({ children }) {
@@ -24,26 +25,28 @@ export default function ScaledPreview({ children }) {
   }, [])
 
   const sheetWidthPx = SHEET_WIDTH_MM * MM_TO_PX
+  const renderedWidth = sheetWidthPx * scale
+  const renderedHeight = sheetWidthPx * (SHEET_HEIGHT_MM / SHEET_WIDTH_MM) * scale
 
   return (
-    <div ref={containerRef} className="w-full print:contents">
+    <div
+      ref={containerRef}
+      className="relative w-full overflow-hidden print:contents print:overflow-visible"
+      style={{ height: `${renderedHeight}px` }}
+    >
       <div
         style={{
-          height: scale < 1 ? `${sheetWidthPx * (297 / 210) * scale}px` : undefined,
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          width: `${sheetWidthPx}px`,
+          marginLeft: `${-renderedWidth / 2}px`,
+          transform: `scale(${scale})`,
+          transformOrigin: 'top left',
         }}
-        className="print:!h-auto"
+        className="print:!static print:!left-auto print:!m-0 print:!transform-none print:!w-auto"
       >
-        <div
-          style={{
-            transform: `scale(${scale})`,
-            transformOrigin: 'top center',
-            width: `${sheetWidthPx}px`,
-            margin: '0 auto',
-          }}
-          className="print:!transform-none print:!w-auto"
-        >
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   )

@@ -72,10 +72,10 @@ function AppShell({ onHome }) {
       <main className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Editor column */}
         <div className="editor-scroll lg:max-h-[calc(100vh-88px)] lg:overflow-y-auto lg:pr-2 space-y-4 print:hidden">
-          <section className="rounded-xl border border-ink-200 dark:border-ink-700 bg-white dark:bg-ink-900 shadow-sm px-4 py-4">
+          <section className="px-4 py-4 bg-white border shadow-sm rounded-xl border-ink-200 dark:border-ink-700 dark:bg-ink-900">
             <div className="flex items-center gap-2 mb-3">
               <PersonalInfoIcon className="w-4 h-4 text-ink-500 dark:text-ink-400" />
-              <h2 className="font-display text-base font-semibold text-ink-800 dark:text-ink-100">
+              <h2 className="text-base font-semibold font-display text-ink-800 dark:text-ink-100">
                 Personal Information
               </h2>
             </div>
@@ -83,7 +83,7 @@ function AppShell({ onHome }) {
               src={personalInfoIllustration}
               alt=""
               aria-hidden="true"
-              className="w-40 sm:w-44 h-auto mx-auto mb-4"
+              className="w-40 h-auto mx-auto mb-4 sm:w-44"
             />
             <PersonalInfoForm
               data={data.personalInfo}
@@ -103,8 +103,8 @@ function AppShell({ onHome }) {
         </div>
 
         {/* Preview column */}
-        <div className="print:contents">
-         <div className="lg:sticky lg:top-[76px] lg:max-h-[calc(100vh-88px)] overflow-y-auto overflow-x-hidden sm:overflow-auto pb-6 print:p-0 print:overflow-visible print:max-h-none rounded-lg">
+        <div className="min-w-0 print:contents">
+          <div className="lg:sticky lg:top-[76px] lg:max-h-[calc(100vh-88px)] overflow-y-auto overflow-x-hidden sm:overflow-auto pb-6 print:p-0 print:overflow-visible print:max-h-none rounded-lg">
             <ScaledPreview>
               <ResumePreview data={data} />
             </ScaledPreview>
@@ -112,7 +112,7 @@ function AppShell({ onHome }) {
 
           {/* Mobile-only: header has no room for this button below the sm breakpoint,
       so it lives here instead, right under the preview. */}
-          <div className="sm:hidden flex justify-center pb-2 print:hidden">
+          <div className="flex justify-center pb-2 sm:hidden print:hidden">
             <Button variant="purple" onClick={handleReset}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path
